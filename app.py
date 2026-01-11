@@ -1,11 +1,14 @@
 from flask import Flask
 from database.db import db
 from routes.auth import auth_bp
+from flask_jwt_extended import JWTManager
 
 app = Flask(__name__)
+
 app.config.from_object('config.Config')
 app.register_blueprint(auth_bp)
 db.init_app(app)
+jwt = JWTManager(app)
 @app.route('/')
 def home():
     return{'message': "REST API Backend Running"}
