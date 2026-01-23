@@ -2,6 +2,8 @@ from flask import Flask
 from database.db import db
 from routes.auth import auth_bp
 from flask_jwt_extended import JWTManager
+from routes.auth import auth_bp
+
 
 app = Flask(__name__)
 
