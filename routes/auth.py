@@ -3,7 +3,7 @@ from models.user import User
 from database.db import db
 from werkzeug.security import generate_password_hash,check_password_hash
 from flask_jwt_extended import create_access_token
-from flask_jwt_extended import jwt_required, get_jwt_identiity
+from flask_jwt_extended import jwt_required, get_jwt_identity
 
 auth_bp = Blueprint("auth",__name__)
 
